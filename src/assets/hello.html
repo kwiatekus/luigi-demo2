@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content=" empty demo page">
+    <title>Hello Page</title>
+    <link rel="stylesheet" type="text/css" href="/fundamental-ui/fundamental-ui.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/kyma-project/luigi/master/client/luigi-client.js"></script>
+</head>
+<body>
+<div class="fd-ui fd-ui--fundamental">
+    <div class="fd-page">
+	<!-- <header class="fd-page__header">
+    <div class="fd-action-bar">
+        <div class="fd-action-bar__header">
+          <h1 class="fd-action-bar__title">
+              Empty Page
+          </h1>
+          <p class="fd-action-bar__description">Optional page intro lorem ipsum dolor</p>
+        </div>
+    </div>
+</header> -->
+
+	<div class="fd-page__content">
+    <section class="fd-section">
+        <h1 class="fd-has-text-align-center fd-has-font-style-italic">
+            Hello <span id="putNemHere"></span>
+        </h1>
+        <p class="fd-has-text-align-center">
+            <a href="#" class="fd-link" onclick="LuigiClient.linkManager().navigate('/home/vue', null, true)">View tractors</a>
+        </p>
+        <img src="tractor.svg"/>
+    </section>
+</div>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+(function() {
+    LuigiClient.addInitListener((data)=>{
+
+        document.getElementById("putNemHere").innerText = data.profile.name ? data.profile.name : data.profile.email;
+    });
+})();
+</script>
+</body>
+</html>
