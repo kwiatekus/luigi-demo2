@@ -34,7 +34,6 @@ Luigi.setConfig({
             viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io',
             children: [{
                 pathSegment: ':id',
-                label: 'details',
                 viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io/:id'
               }
             ]
@@ -46,7 +45,7 @@ Luigi.setConfig({
           },
           {
             pathSegment: 'lazy',
-            label: 'Lazy Loaded',
+            label: 'Lazy Loaded Children',
             children : navNodesProviderFn
           },
           {
