@@ -1,5 +1,5 @@
 
-var navNodesProviderFn = (context) => {
+var getNodesForSubscribedViews = (context) => {
   return new Promise(function (resolve) {
     $.get( "https://navigation-node-srv.us-east.stage.cf.yaas.io/api/navigation", function( data ) {
       $.each( data, (index, node )=>{
@@ -46,7 +46,7 @@ Luigi.setConfig({
           {
             pathSegment: 'lazy',
             label: 'Lazy Loaded Children',
-            children : navNodesProviderFn
+            children : getNodesForSubscribedViews
           },
           {
             pathSegment: 'admin',
@@ -88,7 +88,6 @@ Luigi.setConfig({
       nonceFn: () => {
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
         for (var i = 0; i < 5; i++)
           text += possible.charAt(Math.floor(Math.random() * possible.length));
 
