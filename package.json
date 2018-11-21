@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@kyma-project/luigi-core": "^0.3.6",
+    "@kyma-project/luigi-core": "^0.3.7",
     "fundamental-ui": "^1.2.2",
     "jquery": "^3.3.1"
   },

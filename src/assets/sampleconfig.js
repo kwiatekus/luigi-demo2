@@ -31,10 +31,10 @@ Luigi.setConfig({
           {
             pathSegment: 'vue',
             label: 'Tractor OverVue',
-            viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io',
+            viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io/#/',
             children: [{
                 pathSegment: ':id',
-                viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io/:id'
+                viewUrl: 'https://luigi-module-vue.us-east.stage.cf.yaas.io/#/:id'
               }
             ]
           },
